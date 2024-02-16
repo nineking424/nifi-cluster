@@ -46,11 +46,12 @@ services:
       NIFI_CLUSTER_IS_NODE: true
       NIFI_CLUSTER_NODE_PROTOCOL_PORT: 8082
       NIFI_ZK_CONNECT_STRING: zookeeper:2181
-      NIFI_ELECTION_MAX_WAIT: '30 sec'
+      NIFI_ELECTION_MAX_WAIT: '1 min'
       NIFI_SENSITIVE_PROPS_KEY: '12345678901234567890A'
       TZ: Asia/Seoul
     volumes:
       - nifi-01-data:/opt/nifi/nifi-current
+      - ./data-01:/data
     networks:
       - nifi-net
   nifi-02:
@@ -67,11 +68,12 @@ services:
       NIFI_CLUSTER_IS_NODE: true
       NIFI_CLUSTER_NODE_PROTOCOL_PORT: 8082
       NIFI_ZK_CONNECT_STRING: zookeeper:2181
-      NIFI_ELECTION_MAX_WAIT: '30 sec'
+      NIFI_ELECTION_MAX_WAIT: '1 min'
       NIFI_SENSITIVE_PROPS_KEY: '12345678901234567890A'
       TZ: Asia/Seoul
     volumes:
       - nifi-02-data:/opt/nifi/nifi-current
+      - ./data-02:/data
     networks:
       - nifi-net
   nifi-03:
@@ -88,11 +90,12 @@ services:
       NIFI_CLUSTER_IS_NODE: true
       NIFI_CLUSTER_NODE_PROTOCOL_PORT: 8082
       NIFI_ZK_CONNECT_STRING: zookeeper:2181
-      NIFI_ELECTION_MAX_WAIT: '30 sec'
+      NIFI_ELECTION_MAX_WAIT: '1 min'
       NIFI_SENSITIVE_PROPS_KEY: '12345678901234567890A'
       TZ: Asia/Seoul
     volumes:
       - nifi-03-data:/opt/nifi/nifi-current
+      - ./data-03:/data
     networks:
       - nifi-net
 volumes:
