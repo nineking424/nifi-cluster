@@ -48,7 +48,14 @@ services:
       NIFI_SENSITIVE_PROPS_KEY: '12345678901234567890A'
       TZ: Asia/Seoul
     volumes:
-      - nifi-01-data:/opt/nifi/nifi-current
+      # - nifi-01-data:/opt/nifi/nifi-current
+      - ./nifi-01/state:/opt/nifi/nifi-current/state
+      - ./nifi-01/conf:/opt/nifi/nifi-current/conf
+      - ./nifi-01/database_repository:/opt/nifi/nifi-current/database_repository
+      - ./nifi-01/flowfile_repository:/opt/nifi/nifi-current/flowfile_repository
+      - ./nifi-01/content_repository:/opt/nifi/nifi-current/content_repository
+      - ./nifi-01/provenance_repository:/opt/nifi/nifi-current/provenance_repository
+      - ./nifi-01/logs:/opt/nifi/nifi-current/logs
       - ./data-01:/data
     networks:
       - nifi-net
@@ -70,7 +77,14 @@ services:
       NIFI_SENSITIVE_PROPS_KEY: '12345678901234567890A'
       TZ: Asia/Seoul
     volumes:
-      - nifi-02-data:/opt/nifi/nifi-current
+      # - nifi-02-data:/opt/nifi/nifi-current
+      - ./nifi-02/state:/opt/nifi/nifi-current/state
+      - ./nifi-02/conf:/opt/nifi/nifi-current/conf
+      - ./nifi-02/database_repository:/opt/nifi/nifi-current/database_repository
+      - ./nifi-02/flowfile_repository:/opt/nifi/nifi-current/flowfile_repository
+      - ./nifi-02/content_repository:/opt/nifi/nifi-current/content_repository
+      - ./nifi-02/provenance_repository:/opt/nifi/nifi-current/provenance_repository
+      - ./nifi-02/logs:/opt/nifi/nifi-current/logs
       - ./data-02:/data
     networks:
       - nifi-net
@@ -92,7 +106,14 @@ services:
       NIFI_SENSITIVE_PROPS_KEY: '12345678901234567890A'
       TZ: Asia/Seoul
     volumes:
-      - nifi-03-data:/opt/nifi/nifi-current
+      # - nifi-03-data:/opt/nifi/nifi-current
+      - ./nifi-03/state:/opt/nifi/nifi-current/state
+      - ./nifi-03/conf:/opt/nifi/nifi-current/conf
+      - ./nifi-03/database_repository:/opt/nifi/nifi-current/database_repository
+      - ./nifi-03/flowfile_repository:/opt/nifi/nifi-current/flowfile_repository
+      - ./nifi-03/content_repository:/opt/nifi/nifi-current/content_repository
+      - ./nifi-03/provenance_repository:/opt/nifi/nifi-current/provenance_repository
+      - ./nifi-03/logs:/opt/nifi/nifi-current/logs
       - ./data-03:/data
     networks:
       - nifi-net

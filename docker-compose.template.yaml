@@ -48,7 +48,6 @@ services:
       NIFI_SENSITIVE_PROPS_KEY: '12345678901234567890A'
       TZ: Asia/Seoul
     volumes:
-      - nifi-01-data:/opt/nifi/nifi-current
       - ./data-01:/data
     networks:
       - nifi-net
@@ -70,7 +69,6 @@ services:
       NIFI_SENSITIVE_PROPS_KEY: '12345678901234567890A'
       TZ: Asia/Seoul
     volumes:
-      - nifi-02-data:/opt/nifi/nifi-current
       - ./data-02:/data
     networks:
       - nifi-net
@@ -92,7 +90,6 @@ services:
       NIFI_SENSITIVE_PROPS_KEY: '12345678901234567890A'
       TZ: Asia/Seoul
     volumes:
-      - nifi-03-data:/opt/nifi/nifi-current
       - ./data-03:/data
     networks:
       - nifi-net

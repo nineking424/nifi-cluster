@@ -1,0 +1,22 @@
+mkdir .\nifi-01 .\nifi-02 .\nifi-03
+:: .\nifi-01
+mkdir .\nifi-01\conf
+mkdir .\nifi-01\database_repository
+mkdir .\nifi-01\flowfile_repository
+mkdir .\nifi-01\content_repository
+mkdir .\nifi-01\provenance_repository
+mkdir .\nifi-01\logs
+:: .\nifi-02
+mkdir .\nifi-02\conf
+mkdir .\nifi-02\database_repository
+mkdir .\nifi-02\flowfile_repository
+mkdir .\nifi-02\content_repository
+mkdir .\nifi-02\provenance_repository
+mkdir .\nifi-02\logs
+:: .\nifi-03
+mkdir .\nifi-03\conf
+mkdir .\nifi-03\database_repository
+mkdir .\nifi-03\flowfile_repository
+mkdir .\nifi-03\content_repository
+mkdir .\nifi-03\provenance_repository
+mkdir .\nifi-03\logs
